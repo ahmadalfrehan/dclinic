@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dclinic/data/database/statement.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
@@ -73,6 +75,15 @@ class SQLite {
 
   static makeQuery() async {
     var result = await db?.query('Patient');
+    var result1 = await db?.query('FamilyGroup');
+    var result2 = await db?.query('Treatment');
+    var result3 = await db?.query('Payment');
+    var result4 = await db?.query('TreatmentOptions');
+    log(result.toString());
+    log(result1.toString());
+    log(result2.toString());
+    log(result3.toString());
+    log(result4.toString());
     return result;
   }
 }
