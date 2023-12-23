@@ -7,8 +7,12 @@ import 'Config/routes/app-routes.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  SQLite.init();
+  await SQLite.init();
+  // await SQLite.insertDataBase();
 
+  var result = await SQLite.makeQuery();
+
+  print(result);
   runApp(const MyApp());
 }
 
