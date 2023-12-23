@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       defaultTransition: Transition.upToDown,
-      initialRoute: AppRoutes.HOME,
+      initialRoute: AppRoutes.SPLASH,
       getPages: AppPages.getPages(),
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
