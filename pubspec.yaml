@@ -45,6 +45,7 @@ dependencies:
   dio: ^5.4.0
   drift: ^2.14.0
   sqflite_common_ffi: ^2.3.0+4
+  path_provider: ^2.1.1
 
 dev_dependencies:
   flutter_test:
