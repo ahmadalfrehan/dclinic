@@ -1,11 +1,11 @@
 import 'Failure.dart';
 
 class RemoteException extends Failure implements Exception {
-  final ErrorCode errorCode;
+  final ErrorCode2 errorCode;
   final String message;
   RemoteException(this.errorCode, this.message);
 }
-enum ErrorCode {
+enum ErrorCode2 {
   SERVER_ERROR,
   UNAUTHENTICATED,
   TIMEOUT,
