@@ -8,6 +8,26 @@ class Home extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      drawer: Drawer(
+        backgroundColor: Colors.black54,
+        child: Column(
+          children: [
+            Text('select'),
+          ],
+        ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+              child: ListView.builder(
+            itemBuilder: (context, index) {
+              return Text('data');
+            },
+            itemCount: 10,
+          ))
+        ],
+      ),
+    );
   }
 }
