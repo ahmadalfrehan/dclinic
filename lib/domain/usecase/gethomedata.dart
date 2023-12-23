@@ -5,13 +5,13 @@ import '../../Config/error/Failure.dart';
 import '../entites/patient.dart';
 import '../repositories/get-data-repo.dart';
 
-class GetHomeDataUseCase extends UseCase<Failure, Patient> {
-  final GetDataRpo getDataRpo;
+class GetHomeDataUseCase extends UseCase<Patient, Failure> {
+  final GetDataRpo getDataRepo;
 
-  GetHomeDataUseCase({required this.getDataRpo});
+  GetHomeDataUseCase({required this.getDataRepo});
 
   @override
   Future<Either<Failure, Patient>> call(params) async {
-    return await getDataRpo.getData(); // Assuming getData returns Either<Failure, Patient>
+    return await getDataRepo.getData();
   }
 }
