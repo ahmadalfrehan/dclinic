@@ -20,7 +20,7 @@ class GetDataRepoImpl extends GetDataRpo {
       final result = await authRemoteDataSource.getData();
       return Right(result);
     } catch (error) {
-      return Left(ServerFailure(ErrorCode.SERVER_ERROR, error.toString()));
+      return Left(ServerFailure(ErrorCode2.SERVER_ERROR, error.toString()));
     }
   }
 }
