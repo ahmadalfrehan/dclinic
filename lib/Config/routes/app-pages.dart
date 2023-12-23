@@ -8,9 +8,15 @@ class AppPages {
   static List<GetPage> getPages() {
     return [
       GetPage(
-          name: AppRoutes.HOME,
-          page: () => const Home(),
-          binding: HomeBindings()),
+        name: AppRoutes.HOME,
+        page: () => const Home(),
+        binding: HomeBindings(),
+      ),
+      GetPage(
+        name: AppRoutes.SPLASH,
+        page: () => const Home(),
+        binding: HomeBindings(),
+      ),
     ];
   }
 }
