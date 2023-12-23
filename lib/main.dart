@@ -1,10 +1,14 @@
+import 'package:dclinic/data/database/sqlite.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'Config/routes/app-pages.dart';
 import 'Config/routes/app-routes.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  SQLite.init();
+
   runApp(const MyApp());
 }
 
