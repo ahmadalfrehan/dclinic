@@ -12,9 +12,6 @@ class GetHomeDataUseCase extends UseCase<Patient, Failure> {
 
   @override
   Future<Either<Failure, Patient>> call(params) async {
-    ///A value of type 'Either<Failure, Patient>'
-    /// can't be returned from the method 'call' because it has a return
-    /// type of 'Future<Either<Failure, Patient>>
-    return  await getDataRepo.getData();
+    return await getDataRepo.getData() as Either<Failure, Patient>;
   }
 }
