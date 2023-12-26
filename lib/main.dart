@@ -4,16 +4,18 @@ import 'package:get/get.dart';
 
 import 'Config/routes/app-pages.dart';
 import 'Config/routes/app-routes.dart';
+import 'injection.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await SQLite.init();
   await SQLite.createDataBase();
-  // await SQLite.insertDataBase();
 
-  var result = await SQLite.makeQuery();
+  await init();
 
-  print(result);
+  // var result = await SQLite.makeQuery();
+  //
+  // print(result);
   runApp(const MyApp());
 }
 

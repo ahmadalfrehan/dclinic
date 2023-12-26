@@ -5,7 +5,7 @@ import '../../Config/error/Failure.dart';
 import '../entites/patient.dart';
 import '../repositories/get-data-repo.dart';
 
-class GetHomeDataUseCase extends UseCase<Patient, Failure> {
+class GetHomeDataUseCase extends UseCase<Patient, String> {
   final GetDataRpo getDataRepo;
 
   GetHomeDataUseCase({required this.getDataRepo});
