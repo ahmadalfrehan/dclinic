@@ -9,7 +9,7 @@ class Home extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
+      drawer: const Drawer(
         backgroundColor: Colors.black54,
         child: Column(
           children: [
@@ -22,7 +22,7 @@ class Home extends GetView<HomeController> {
           Expanded(
               child: ListView.builder(
             itemBuilder: (context, index) {
-              return Text('data');
+              return const Text('data');
             },
             itemCount: 10,
           ))

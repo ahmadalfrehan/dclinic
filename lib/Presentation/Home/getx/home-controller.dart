@@ -1,20 +1,29 @@
+import 'package:dclinic/Config/Debug/out.dart';
 import 'package:dclinic/domain/usecase/gethomedata.dart';
 import 'package:get/get.dart';
 
 import '../../../injection.dart';
 
 class HomeController extends GetxController{
-@override
+
+
+  @override
   void onInit() {
+    log('get');
     getData();
     super.onInit();
   }
 
   getData() async {
-  GetHomeDataUseCase getHomeDataUseCase  = sl();
-  final result = getHomeDataUseCase(
-''
-  );
-  print(result);
+    log('getData');
+    GetHomeDataUseCase getHomeDataUseCase = sl();
+    final result = await getHomeDataUseCase('');
+    result.fold(
+        (l) => {
+          log(l),
+            },
+        (r) => {
+          log(r),
+            });
   }
 }
