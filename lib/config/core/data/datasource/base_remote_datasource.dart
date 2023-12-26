@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 
 import '../../../Debug/out.dart';
+import '../../../error/enumerror.dart';
 import '../../../error/error_handler.dart';
 import '../../../error/exception.dart';
 import '../../domain/Repository/base-repository.dart';
@@ -42,7 +43,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             error.response?.statusCode ?? 404, "notFound");
         rethrow;
       } else {
-        throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+        throw RemoteException(ErrorCode.SERVER_ERROR, '');
       }
     }
   }
@@ -82,7 +83,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
         return list;
       } else {
         log('error');
-        throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+        throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
       }
     } catch (error) {
       log(error);
@@ -93,7 +94,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             error.response?.statusCode ?? 404, 'not found');
         rethrow;
       } else {
-        throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+        throw RemoteException(ErrorCode.SERVER_ERROR, '');
       }
     }
   }
@@ -118,11 +119,11 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
           return baseRes;
         } else {
           log('error');
-          throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+          throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
         }
       }
       log('error');
-      throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+      throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
     } catch (error) {
       log(error);
       if (error is RemoteException) rethrow;
@@ -131,7 +132,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             error.response?.statusCode ?? 404, "notFound");
         rethrow;
       } else {
-        throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+        throw RemoteException(ErrorCode.SERVER_ERROR, '');
       }
     }
   }
@@ -170,7 +171,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             return baseRes;
           } else {
             log('error');
-            throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+            throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
           }
         } else {
           baseRes = fromJson(json.decode(response.data));
@@ -185,12 +186,12 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
           }
           else {
             log('error');
-            throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+            throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
           }
         }
       }
       log('error');
-      throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+      throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
     } catch (error) {
       log('error');
       log(error);
@@ -200,7 +201,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             error.response?.statusCode ?? 404, "notFound");
         rethrow;
       } else {
-        throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+        throw RemoteException(ErrorCode.SERVER_ERROR, '');
       }
     }
   }
@@ -229,7 +230,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
               return baseRes;
             } else {
               log('error');
-              throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+              throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
             }
           } else {
             final baseRes = fromJson(json.decode(response.data));
@@ -238,12 +239,12 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
               return baseRes;
             } else {
               log('error');
-              throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+              throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
             }
           }
         }
         log('error');
-        throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+        throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
       } catch (error) {
         log(error);
         if (error is RemoteException) rethrow;
@@ -252,7 +253,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
               error.response?.statusCode ?? 404, "notFound");
           rethrow;
         } else {
-          throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+          throw RemoteException(ErrorCode.SERVER_ERROR, '');
         }
       }
     }
@@ -274,11 +275,11 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
           return baseRes;
         } else {
           log('error');
-          throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+          throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
         }
       }
       log('error');
-      throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+      throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
     } catch (error) {
       log(error);
       if (error is RemoteException) rethrow;
@@ -287,7 +288,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             error.response?.statusCode ?? 404, "notFound");
         rethrow;
       } else {
-        throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+        throw RemoteException(ErrorCode.SERVER_ERROR, '');
       }
     }
   }
@@ -311,11 +312,11 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
           return baseRes;
         } else {
           log('error');
-          throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+          throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
         }
       }
       log('error');
-      throw RemoteException(ErrorCode2.SERVER_ERROR, 'message');
+      throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
     } catch (error) {
       log(error);
       if (error is RemoteException) rethrow;
@@ -324,7 +325,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
             error.response?.statusCode ?? 404, "notFound");
         rethrow;
       } else {
-        throw RemoteException(ErrorCode2.SERVER_ERROR, '');
+        throw RemoteException(ErrorCode.SERVER_ERROR, '');
       }
     }
   }

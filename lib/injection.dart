@@ -16,7 +16,7 @@ Future<void> init() async {
   sl.registerLazySingleton(() {
     final dio = Dio(
       BaseOptions(
-        baseUrl: 'EndPoints.BASE_URL',
+        baseUrl: 'https://ahmadalfrehan.com',
         connectTimeout: const Duration(minutes: 3),
         headers: {
           'Content-Type': 'application/json',

@@ -6,6 +6,7 @@ import 'package:dclinic/domain/repositories/get-data-repo.dart';
 
 import '../../Config/error/exception.dart' as s;
 import '../../config/error/Failure.dart' ;
+import '../../config/error/enumerror.dart';
 import '../../config/error/exception.dart';
 import '../model/patientModel.dart';
 
@@ -22,7 +23,7 @@ class GetDataRepoImpl extends GetDataRpo {
       final result = await authRemoteDataSource.getData();
       return Right(result);
     } catch (error) {
-      return Left(ServerFailure(s.ErrorCode2.SERVER_ERROR as ErrorCode2, error.toString()));
+      return Left(ServerFailure(ErrorCode.SERVER_ERROR, error.toString()));
     }
   }
 }

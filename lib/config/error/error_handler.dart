@@ -1,4 +1,5 @@
 
+import 'enumerror.dart';
 import 'exception.dart';
 
 class ErrorHandler {
@@ -6,15 +7,15 @@ class ErrorHandler {
     if (statusCode >= 200 && statusCode < 300) {
       return true;
     } else if (statusCode == 401) {
-      throw RemoteException(ErrorCode2.UNAUTHENTICATED, message);
+      throw RemoteException(ErrorCode.UNAUTHENTICATED, message);
     } else if (statusCode == 422) {
-      throw RemoteException(ErrorCode2.WRONG_INPUT, message);
+      throw RemoteException(ErrorCode.WRONG_INPUT, message);
     } else if (statusCode == 403) {
-      throw RemoteException(ErrorCode2.FORBIDDEN, message);
+      throw RemoteException(ErrorCode.FORBIDDEN, message);
     } else if (statusCode == 404) {
-      throw RemoteException(ErrorCode2.NOT_FOUND, message);
+      throw RemoteException(ErrorCode.NOT_FOUND, message);
     } else if (statusCode >= 500) {
-      throw RemoteException(ErrorCode2.SERVER_ERROR, message);
+      throw RemoteException(ErrorCode.SERVER_ERROR, message);
     }
     return false;
   }

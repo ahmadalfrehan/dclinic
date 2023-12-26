@@ -7,6 +7,7 @@ import '../../../injection.dart';
 class HomeController extends GetxController{
 
 
+  RxString sel = 'select'.obs;
   @override
   void onInit() {
     log('get');
