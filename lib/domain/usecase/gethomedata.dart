@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:dclinic/data/model/patientModel.dart';
 
 import '../../Config/core/domain/use_case/use_case.dart';
 import '../../Config/error/Failure.dart';
@@ -12,6 +13,6 @@ class GetHomeDataUseCase extends UseCase<Patient, String> {
 
   @override
   Future<Either<Failure, Patient>> call(params) async {
-    return await getDataRepo.getData() as Either<Failure, Patient>;
+    return await getDataRepo.getData() as Either<Failure, PatientModel>;
   }
 }
