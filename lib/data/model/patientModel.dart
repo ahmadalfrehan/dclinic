@@ -8,4 +8,13 @@ class PatientModel extends Patient {
     required super.patientId,
     required super.treatment,
   });
+factory PatientModel.fromJson(Map<String, dynamic> data) {
+    return PatientModel(
+      name: data['name'],
+      phone: data['phone'],
+      address: data['address'],
+      patientId: data['patientId'],
+      treatment: data['treatment'],
+    );
+  }
 }
