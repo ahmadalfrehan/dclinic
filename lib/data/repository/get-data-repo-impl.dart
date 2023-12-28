@@ -15,11 +15,11 @@ class GetDataRepoImpl extends GetDataRpo {
 
   @override
   Future<Either<Failure, List<Patient>>> getData() async {
-    try {
+    // try {
       final result = await authRemoteDataSource.getData();
       return Right(result);
-    } catch (error) {
-      return Left(ServerFailure(ErrorCode.SERVER_ERROR, error.toString()));
-    }
+    // } catch (error) {
+    //   return Left(ServerFailure(ErrorCode.SERVER_ERROR, error.toString()));
+    // }
   }
 }

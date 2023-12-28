@@ -2,7 +2,7 @@ abstract class TreatmentOption {
   int? patientId;
   int? optionId;
 
-  String? price;
+  double? price;
   String? treatmentType;
   String? optionName;
 

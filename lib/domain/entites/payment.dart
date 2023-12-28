@@ -1,7 +1,7 @@
 abstract class Payment {
   int? paymentId;
   int? patientId;
-  String? amount;
+  double? amount;
   String? date;
 
   Payment({

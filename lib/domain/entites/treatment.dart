@@ -7,8 +7,8 @@ abstract class Treatment {
   String? takeOff;
   String? reProcessing;
   String? dow;
-  String? price;
-  String? toothNumber;
+  double? price;
+  int? toothNumber;
   String? date;
 
   Treatment({
