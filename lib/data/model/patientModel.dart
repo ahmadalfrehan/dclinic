@@ -2,7 +2,6 @@ import 'package:dclinic/data/model/familyGroupModel.dart';
 import 'package:dclinic/data/model/paymentModel.dart';
 import 'package:dclinic/data/model/treatmentModel.dart';
 import 'package:dclinic/domain/entites/patient.dart';
-import 'package:dclinic/domain/entites/treatment.dart';
 
 class PatientModel extends Patient {
   PatientModel({
@@ -21,10 +20,21 @@ factory PatientModel.fromJson(Map<String, dynamic> data) {
       phone: data['phone'],
       address: data['address'],
       patientId: data['patientId'],
-      treatment:data['']==null?[]:List.from(data['treatments'].map((e) => TreatmentModel.fromJson(e))),
-      familyGroup: data['']==null?[]:List.from(data['familyGroup'].map((e) => FamilyGroupModel.fromJson(e))),
-      payments: data['']==null?[]:List.from(data['payments'].map((e) => PaymentModel.fromJson(e))),
-      treatmentOptions: data['']==null?[]:List.from(data['treatmentOptions'].map((e) => TreatmentOptionsModel.fromJson(e))),
+      treatment: data['treatment'] == null
+          ? []
+          : List.from(
+              data['treatments'].map((e) => TreatmentModel.fromJson(e))),
+      familyGroup: data['familyGroup'] == null
+          ? []
+          : List.from(
+              data['familyGroup'].map((e) => FamilyGroupModel.fromJson(e))),
+      payments: data['payments'] == null
+          ? []
+          : List.from(data['payments'].map((e) => PaymentModel.fromJson(e))),
+      treatmentOptions: data['treatmentOptions'] == null
+          ? []
+          : List.from(data['treatmentOptions']
+              .map((e) => TreatmentOptionsModel.fromJson(e))),
     );
   }
 }
