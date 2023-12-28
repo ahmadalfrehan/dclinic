@@ -27,7 +27,7 @@ class GetDataRemoteDataSourceImpl extends BaseRemoteDataSourceImpl
     // var datad = json.decode(result);
     Map<String,dynamic>data =  Map<String,dynamic>.from(result);
     // for (var i in result) {
-    //   log(i);
+      log(data);
 
       patients.add(PatientModel.fromJson(data));
     // }
