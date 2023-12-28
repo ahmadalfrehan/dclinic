@@ -7,11 +7,11 @@ import '../../conf/theme/app-themes.dart';
 class Button extends StatelessWidget {
   final String text;
   final Function() function;
-  final IconData icon;
+  final IconData ?icon;
   final Color? color;
   final TextStyle? textStyle;
 
-  const Button(this.text, this.function, this.icon, {this.color,this.textStyle,Key? key})
+  const Button(this.text, this.function,  {this.icon,this.color,this.textStyle,Key? key})
       : super(key: key);
 
   @override
@@ -31,6 +31,7 @@ class Button extends StatelessWidget {
                 Text(text,
                     style:textStyle??
                     AppTextStyle.textStyleWith500Weight15SizeDarkBlueColor),
+               if(icon!=null)
                 Icon(
                   icon,
                   color: AppTheme.darkBlue,

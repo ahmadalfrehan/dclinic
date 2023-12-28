@@ -53,8 +53,8 @@ class AddPatient extends GetView<HomeController> {
           Row(
             children: [
               Spacer(),
-              Button('Add Group  ', () => null, Icons.group_add,color: AppTheme.darkBlue9),
-              Button('Add Patient  ', () => null, Icons.person_add,color: AppTheme.darkBlue9),
+              Button('Add Group  ', () => null,color: AppTheme.darkBlue9,textStyle: AppTextStyle.textStyleWith400Weight12SizeWhiteColor,),
+              Button('Add Patient  ', () => null,color: AppTheme.darkBlue9,textStyle: AppTextStyle.textStyleWith400Weight12SizeWhiteColor,),
             ],
           )
         ],
