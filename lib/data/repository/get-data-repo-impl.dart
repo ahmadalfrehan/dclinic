@@ -3,11 +3,8 @@ import 'package:dclinic/data/datasource/getdata-remote-datasource.dart';
 import 'package:dclinic/domain/entites/patient.dart';
 import 'package:dclinic/domain/repositories/get-data-repo.dart';
 
-import '../../Conf/error/exception.dart' as s;
 import '../../Conf/error/Failure.dart' ;
 import '../../Conf/error/enumerror.dart';
-import '../../Conf/error/exception.dart';
-import '../model/patientModel.dart';
 
 class GetDataRepoImpl extends GetDataRpo {
   final GetDataRemoteDataSource authRemoteDataSource;
