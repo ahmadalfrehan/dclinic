@@ -24,7 +24,8 @@ class Home extends GetView<HomeController> {
               ),
               child: Column(
                 children: [
-                  _button('Home', () => null),
+                  _button('Home', () => null,Icons.home),
+                  _button('Add Patient', () => null,Icons.add),
                 ],
               ),
             ),
@@ -48,12 +49,12 @@ class Home extends GetView<HomeController> {
     });
   }
 
-  _button(String text, Function() function) {
+  _button(String text, Function() function,IconData icon) {
     return InkWell(
       onTap: function,
       child: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             color: Colors.white,
 
           ),
@@ -62,7 +63,7 @@ class Home extends GetView<HomeController> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(Icons.home,color: AppTheme.darkBlue,),
+                 Icon(icon,color: AppTheme.darkBlue,),
                 Text(text,style: AppTextStyle.textStyleWith500Weight15SizeDarkBlueColor
                 ),
               ],
