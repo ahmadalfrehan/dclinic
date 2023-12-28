@@ -16,10 +16,10 @@ class PatientModel extends Patient {
   });
 factory PatientModel.fromJson(Map<String, dynamic> data) {
     return PatientModel(
-      name: data['name'],
-      phone: data['phone'],
-      address: data['address'],
-      patientId: data['patientId'],
+      name: data['Name'],
+      phone: data['PhoneNumber'],
+      address: data['Address'],
+      patientId: data['PatientID'],
       treatment: data['treatment'] == null
           ? []
           : List.from(
