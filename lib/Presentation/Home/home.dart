@@ -1,3 +1,4 @@
+import 'package:dclinic/Presentation/Widgets/Button.dart';
 import 'package:dclinic/conf/Debug/sizedbox-extension.dart';
 import 'package:dclinic/conf/style/app-text-style.dart';
 import 'package:dclinic/conf/theme/app-themes.dart';
@@ -25,11 +26,11 @@ class Home extends GetView<HomeController> {
               ),
               child: Column(
                 children: [
-                  _button('Home', () => null, Icons.home),
+                  Button('Home', () => null, Icons.home),
                   5.0.spaceY,
-                  _button('Add Patient', () => null, Icons.add),
+                  Button('Add Patient', () => null, Icons.add),
                   5.0.spaceY,
-                  _button('Search', () => null, Icons.search),
+                  Button('Search', () => null, Icons.search),
                 ],
               ),
             ),
@@ -112,5 +113,4 @@ class Home extends GetView<HomeController> {
       ),
     );
   }
-
-
+}
