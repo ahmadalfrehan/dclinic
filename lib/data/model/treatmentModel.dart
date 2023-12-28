@@ -1,3 +1,4 @@
+import 'package:dclinic/domain/entites/payment.dart';
 import 'package:dclinic/domain/entites/treatment-option.dart';
 import 'package:dclinic/domain/entites/treatment.dart';
 
@@ -52,3 +53,4 @@ class TreatmentOptionsModel extends TreatmentOption {
     );
   }
 }
+
