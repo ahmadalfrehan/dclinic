@@ -18,6 +18,8 @@ class GetDataRemoteDataSourceImpl extends BaseRemoteDataSourceImpl
   Future<List<Patient>> getData() async {
     SQLite.init();
     var result = await SQLite.makeQuery();
+    log('result in get remote');
+    log(result.toString());
     log(result is List<Patient>);
     return result;
   }
