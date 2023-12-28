@@ -1,13 +1,13 @@
+import 'package:dclinic/Conf/Debug/out.dart';
 import 'package:dclinic/data/database/sqlite.dart';
 
-import '../../Config/core/data/datasource/base_remote_datasource.dart';
+import '../../Conf/core/data/datasource/base_remote_datasource.dart';
 import '../../domain/entites/patient.dart';
-import '../model/patientModel.dart';
 
 abstract class GetDataRemoteDataSource extends BaseRemoteDataSourceImpl {
   GetDataRemoteDataSource({required super.dio});
 
-  Future<PatientModel> getData();
+  Future<List<Patient>> getData();
 }
 
 class GetDataRemoteDataSourceImpl extends BaseRemoteDataSourceImpl
@@ -15,9 +15,10 @@ class GetDataRemoteDataSourceImpl extends BaseRemoteDataSourceImpl
   GetDataRemoteDataSourceImpl({required super.dio});
 
   @override
-  Future<PatientModel> getData() async {
+  Future<List<Patient>> getData() async {
     SQLite.init();
     var result = await SQLite.makeQuery();
+    log(result is List<Patient>);
     return result;
   }
 }

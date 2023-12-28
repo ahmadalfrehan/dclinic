@@ -1,4 +1,4 @@
-import 'package:dclinic/Config/routes/app-routes.dart';
+import 'package:dclinic/Conf/routes/app-routes.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {

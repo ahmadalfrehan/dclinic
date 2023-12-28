@@ -2,8 +2,8 @@ import 'package:dclinic/data/database/sqlite.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'Config/routes/app-pages.dart';
-import 'Config/routes/app-routes.dart';
+import 'Conf/routes/app-pages.dart';
+import 'Conf/routes/app-routes.dart';
 import 'injection.dart';
 
 void main() async{

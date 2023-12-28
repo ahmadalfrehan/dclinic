@@ -1,18 +1,17 @@
 import 'package:dartz/dartz.dart';
-import 'package:dclinic/data/model/patientModel.dart';
 
-import '../../Config/core/domain/use_case/use_case.dart';
-import '../../Config/error/Failure.dart';
+import '../../Conf/core/domain/use_case/use_case.dart';
+import '../../Conf/error/Failure.dart' as f;
 import '../entites/patient.dart';
 import '../repositories/get-data-repo.dart';
 
-class GetHomeDataUseCase extends UseCase<Patient, String> {
+class GetHomeDataUseCase extends UseCase<List<Patient>, String> {
   final GetDataRpo getDataRepo;
 
   GetHomeDataUseCase({required this.getDataRepo});
 
   @override
-  Future<Either<Failure, Patient>> call(params) async {
-    return await getDataRepo.getData() as Either<Failure, PatientModel>;
+  Future<Either<f.Failure, List<Patient>>> call(params) async {
+    return await getDataRepo.getData();
   }
 }

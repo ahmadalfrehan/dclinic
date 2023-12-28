@@ -24,9 +24,9 @@ class Home extends GetView<HomeController> {
             Expanded(
                 child: ListView.builder(
               itemBuilder: (context, index) {
-                return const Text('data');
+                return Text(controller.patient.value[index].name.toString());
               },
-              itemCount: 10,
+              itemCount: controller.patient.length,
             ))
           ],
         ),

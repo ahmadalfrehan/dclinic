@@ -1,6 +1,7 @@
 import 'package:dclinic/domain/entites/treatment.dart';
+import 'package:equatable/equatable.dart';
 
-abstract class Patient {
+class Patient extends Equatable {
   String? name;
   String? phone;
   String? address;
@@ -14,4 +15,14 @@ abstract class Patient {
     required this.patientId,
     required this.treatment,
   });
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [
+        name,
+        phone,
+        address,
+        patientId,
+        treatment,
+      ];
 }

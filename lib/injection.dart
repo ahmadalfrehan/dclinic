@@ -5,10 +5,10 @@ import 'package:dclinic/domain/usecase/gethomedata.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-import 'Config/core/data/datasource/base_local_datasource.dart';
-import 'Config/core/data/datasource/base_remote_datasource.dart';
-import 'Config/core/data/repositories/base-Repo.dart';
-import 'Config/core/domain/Repository/base_local_repo.dart';
+import 'Conf/core/data/datasource/base_local_datasource.dart';
+import 'Conf/core/data/datasource/base_remote_datasource.dart';
+import 'Conf/core/data/repositories/base-Repo.dart';
+import 'Conf/core/domain/Repository/base_local_repo.dart';
 
 final sl = GetIt.instance;
 

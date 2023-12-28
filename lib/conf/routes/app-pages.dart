@@ -1,4 +1,4 @@
-import 'package:dclinic/Config/routes/app-routes.dart';
+import 'package:dclinic/Conf/routes/app-routes.dart';
 import 'package:dclinic/Presentation/Home/getx/home-bindings.dart';
 import 'package:dclinic/Presentation/Splash/getx/splash-bindings.dart';
 import 'package:dclinic/Presentation/Splash/splash.dart';

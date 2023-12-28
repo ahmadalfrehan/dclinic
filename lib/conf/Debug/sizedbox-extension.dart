@@ -1,4 +1,4 @@
-import 'package:dclinic/Config/Debug/screen-stability.dart';
+import 'package:dclinic/Conf/Debug/screen-stability.dart';
 import 'package:flutter/material.dart';
 
 
