@@ -113,29 +113,4 @@ class Home extends GetView<HomeController> {
     );
   }
 
-  _button(String text, Function() function, IconData icon) {
-    return MaterialButton(
-      onPressed: function,
-      child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5),
-            color: Colors.white,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(text,
-                    style:
-                        AppTextStyle.textStyleWith500Weight15SizeDarkBlueColor),
-                Icon(
-                  icon,
-                  color: AppTheme.darkBlue,
-                ),
-              ],
-            ),
-          )),
-    );
-  }
-}
+
