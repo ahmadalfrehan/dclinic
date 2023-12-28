@@ -1,4 +1,5 @@
 import 'package:dclinic/Presentation/Widgets/Button.dart';
+import 'package:dclinic/Presentation/Widgets/addPatient.dart';
 import 'package:dclinic/conf/Debug/sizedbox-extension.dart';
 import 'package:dclinic/conf/style/app-text-style.dart';
 import 'package:dclinic/conf/theme/app-themes.dart';
@@ -28,7 +29,13 @@ class Home extends GetView<HomeController> {
                 children: [
                   Button('Home', () => null, Icons.home),
                   5.0.spaceY,
-                  Button('Add Patient', () => null, Icons.add),
+                  Button('Add Patient', () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => const AlertDialog(
+                              content: AddPatient(),
+                            ));
+                  }, Icons.add),
                   5.0.spaceY,
                   Button('Search', () => null, Icons.search),
                 ],
