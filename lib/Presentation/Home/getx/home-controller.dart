@@ -3,6 +3,7 @@ import 'package:dclinic/domain/entites/patient.dart';
 import 'package:dclinic/domain/usecase/gethomedata.dart';
 import 'package:get/get.dart';
 
+import '../../../data/model/returned.dart';
 import '../../../injection.dart';
 
 class HomeController extends GetxController{
@@ -17,7 +18,7 @@ class HomeController extends GetxController{
     super.onInit();
   }
 
-  RxList<Patient> patient = <Patient>[].obs;
+  RxList<ReturnedModel> patient = <ReturnedModel>[].obs;
 
   getData() async {
     log('getData');

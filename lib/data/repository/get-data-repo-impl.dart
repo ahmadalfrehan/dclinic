@@ -5,6 +5,7 @@ import 'package:dclinic/domain/repositories/get-data-repo.dart';
 
 import '../../Conf/error/Failure.dart' ;
 import '../../Conf/error/enumerror.dart';
+import '../model/returned.dart';
 
 class GetDataRepoImpl extends GetDataRpo {
   final GetDataRemoteDataSource authRemoteDataSource;
@@ -14,7 +15,7 @@ class GetDataRepoImpl extends GetDataRpo {
   }) : super();
 
   @override
-  Future<Either<Failure, List<Patient>>> getData() async {
+  Future<Either<Failure, List<ReturnedModel>>> getData() async {
     // try {
       final result = await authRemoteDataSource.getData();
       return Right(result);
