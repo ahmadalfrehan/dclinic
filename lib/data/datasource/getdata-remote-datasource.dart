@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dclinic/Conf/Debug/out.dart';
 import 'package:dclinic/data/database/sqlite.dart';
 import 'package:dclinic/data/model/patientModel.dart';
@@ -22,9 +24,13 @@ class GetDataRemoteDataSourceImpl extends BaseRemoteDataSourceImpl
     log('result in get remote');
     log(result.toString());
     List<Patient> patients = [];
-    for (var i in result) {
-      patients.add(PatientModel.fromJson(i));
-    }
+    // var datad = json.decode(result);
+    Map<String,dynamic>data =  Map<String,dynamic>.from(result);
+    // for (var i in result) {
+    //   log(i);
+
+      patients.add(PatientModel.fromJson(data));
+    // }
     log(patients);
     return patients;
   }

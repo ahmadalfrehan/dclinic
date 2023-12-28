@@ -77,14 +77,12 @@ class SQLite {
     var result2 = await db?.query('Treatment');
     var result3 = await db?.query('Payment');
     var result4 = await db?.query('TreatmentOptions');
-    return [
-      {
-        'patient': result,
-        'familyGroup': result1,
-        'treatments': result2,
-        'payments': result3,
-        'treatmentOptions': result4,
-      }
-    ];
+    return {
+      'patient': result,
+      'familyGroup': result1,
+      'treatments': result2,
+      'payments': result3,
+      'treatmentOptions': result4,
+    };
   }
 }
