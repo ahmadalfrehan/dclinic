@@ -27,9 +27,9 @@ class ReturnedModel {
 
   factory ReturnedModel.fromJson(Map<String, dynamic> data) {
     return ReturnedModel(
-      patients: data['patients'] == null
+      patients: data['patient'] == null
           ? []
-          : List.from(data['patients'].map((e) => PatientModel.fromJson(e))),
+          : List.from(data['patient'].map((e) => PatientModel.fromJson(e))),
       treatment: data['treatments'] == null
           ? []
           : List.from(

@@ -1,3 +1,5 @@
+import 'package:dclinic/conf/style/app-text-style.dart';
+import 'package:dclinic/conf/theme/app-themes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,26 +13,61 @@ class Home extends GetView<HomeController> {
     return Obx(() {
       print(controller.sel.value);
       return Scaffold(
-        drawer: const Drawer(
-          backgroundColor: Colors.black54,
-          child: Column(
-            children: [
-              Text('select'),
-            ],
-          ),
-        ),
-        body: Column(
+        body: Row(
           children: [
+            Container(
+              height: Get.height,
+              width: Get.width/5,
+              decoration: BoxDecoration(
+                color: Colors.black54,
+
+              ),
+              child: Column(
+                children: [
+                  _button('Home', () => null),
+                ],
+              ),
+            ),
             Expanded(
-                child: ListView.builder(
-              itemBuilder: (context, index) {
-                return Text(controller.patient.value[index].patients[0].name.toString());
-              },
-              itemCount: controller.patient.length,
-            ))
+              child: Column(
+                children: [
+                  Expanded(
+                      child: ListView.builder(
+                    itemBuilder: (context, index) {
+                      return Text(controller.patient.value[index].patients[0].name
+                          .toString());
+                    },
+                    itemCount: controller.patient.length,
+                  ))
+                ],
+              ),
+            ),
           ],
         ),
       );
     });
+  }
+
+  _button(String text, Function() function) {
+    return InkWell(
+      onTap: function,
+      child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.white,
+
+          ),
+          child:  Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Icon(Icons.home,color: AppTheme.darkBlue,),
+                Text(text,style: AppTextStyle.textStyleWith500Weight15SizeDarkBlueColor
+                ),
+              ],
+            ),
+          )),
+    );
   }
 }
