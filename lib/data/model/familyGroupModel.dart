@@ -9,9 +9,9 @@ class FamilyGroupModel extends FamilyGroup {
 
   factory FamilyGroupModel.fromJson(Map<String, dynamic> data) {
     return FamilyGroupModel(
-      relationship: data['relationship'],
-      patientId: data['patientId'],
-      groupId: data['groupId'],
+      relationship: data['Relationship'],
+      patientId: data['PatientID'],
+      groupId: data['GroupID'],
     );
   }
 }

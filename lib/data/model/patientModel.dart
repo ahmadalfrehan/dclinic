@@ -20,7 +20,7 @@ factory PatientModel.fromJson(Map<String, dynamic> data) {
       phone: data['PhoneNumber'],
       address: data['Address'],
       patientId: data['PatientID'],
-      treatment: data['treatment'] == null
+      treatment: data['treatments'] == null
           ? []
           : List.from(
               data['treatments'].map((e) => TreatmentModel.fromJson(e))),

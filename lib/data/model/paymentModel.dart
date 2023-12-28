@@ -10,10 +10,10 @@ class PaymentModel extends Payment {
 
   factory PaymentModel.fromJson(Map<String, dynamic> data) {
     return PaymentModel(
-      paymentId: data['paymentId'],
-      patientId: data['patientId'],
-      amount: data['amount'],
-      date: data['date'],
+      paymentId: data['PaymentID'],
+      patientId: data['PatientID'],
+      amount: data['Amount'],
+      date: data['Date'],
     );
   }
 }

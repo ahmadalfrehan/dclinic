@@ -19,17 +19,17 @@ class TreatmentModel extends Treatment {
 
   factory TreatmentModel.fromJson(Map<String, dynamic> data) {
     return TreatmentModel(
-      treatmentID: data['treatmentID'],
-      patientID: data['patientID'],
-      governorate: data['governorate'],
-      restoration: data['restoration'],
-      gumTreatment: data['gumTreatment'],
-      takeOff: data['takeOff'],
-      reProcessing: data['reProcessing'],
-      dow: data['dow'],
-      price: data['price'],
-      toothNumber: data['toothNumber'],
-      date: data['date'],
+      treatmentID: data['TreatmentID'],
+      patientID: data['PatientID'],
+      governorate: data['Governorate'],
+      restoration: data['Restoration'],
+      gumTreatment: data['GumTreatment'],
+      takeOff: data['TakeOff'],
+      reProcessing: data['ReProcessing'],
+      dow: data['Dow'],
+      price: data['Price'],
+      toothNumber: data['ToothNumber'],
+      date: data['Date'],
     );
   }
 }
@@ -46,10 +46,10 @@ class TreatmentOptionsModel extends TreatmentOption {
   factory TreatmentOptionsModel.fromJson(Map<String, dynamic> data) {
     return TreatmentOptionsModel(
       patientId: data['patientId'],
-      optionId: data['optionId'],
-      price: data['price'],
-      treatmentType: data['treatmentType'],
-      optionName: data['optionName'],
+      optionId: data['OptionID'],
+      price: data['Price'],
+      treatmentType: data['TreatmentType'],
+      optionName: data['OptionName'],
     );
   }
 }

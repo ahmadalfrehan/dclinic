@@ -25,6 +25,7 @@ class GetDataRemoteDataSourceImpl extends BaseRemoteDataSourceImpl
     for (var i in result) {
       patients.add(PatientModel.fromJson(i));
     }
+    log(patients);
     return patients;
   }
 }
