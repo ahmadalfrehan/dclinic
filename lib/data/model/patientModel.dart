@@ -1,4 +1,5 @@
 import 'package:dclinic/domain/entites/patient.dart';
+import 'package:dclinic/domain/entites/treatment.dart';
 
 class PatientModel extends Patient {
   PatientModel({
@@ -17,7 +18,7 @@ factory PatientModel.fromJson(Map<String, dynamic> data) {
       phone: data['phone'],
       address: data['address'],
       patientId: data['patientId'],
-      treatment: data[''],
+      treatment:data[''],
       familyGroup: data[''],
       payments: data[''],
       treatmentOptions: data[''],
