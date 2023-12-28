@@ -56,6 +56,11 @@ class AppTextStyle {
     color: AppTheme.white133,
     fontWeight: FontWeight.w500,
   );
+  static const textStyleWith400Weight12SizeWhiteColor = TextStyle(
+    fontSize: fontSize12,
+    color: AppTheme.white242,
+    fontWeight: FontWeight.w400,
+  );
   static const textStyleWith700Weight15SizeYelloColor = TextStyle(
     fontSize: fontSize20,
     color: AppTheme.yelloTheme,
