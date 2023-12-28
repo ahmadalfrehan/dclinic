@@ -9,8 +9,9 @@ class Button extends StatelessWidget {
   final Function() function;
   final IconData icon;
   final Color? color;
+  final TextStyle? textStyle;
 
-  const Button(this.text, this.function, this.icon, {this.color,Key? key})
+  const Button(this.text, this.function, this.icon, {this.color,this.textStyle,Key? key})
       : super(key: key);
 
   @override
@@ -28,7 +29,7 @@ class Button extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(text,
-                    style:
+                    style:textStyle??
                     AppTextStyle.textStyleWith500Weight15SizeDarkBlueColor),
                 Icon(
                   icon,
