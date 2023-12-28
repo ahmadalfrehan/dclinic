@@ -8,8 +8,9 @@ class Button extends StatelessWidget {
   final String text;
   final Function() function;
   final IconData icon;
+  final Color? color;
 
-  const Button(this.text, this.function, this.icon, {Key? key})
+  const Button(this.text, this.function, this.icon, {this.color,Key? key})
       : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class Button extends StatelessWidget {
       child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
-            color: Colors.white,
+            color:color?? Colors.white,
           ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),
