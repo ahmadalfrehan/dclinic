@@ -14,8 +14,7 @@ class PatientModel extends Patient {
     required super.familyGroup,
     required super.treatmentOptions,
   });
-
-  factory PatientModel.fromJson(Map<String, dynamic> data) {
+factory PatientModel.fromJson(Map<String, dynamic> data) {
     return PatientModel(
       name: data['Name'],
       phone: data['PhoneNumber'],

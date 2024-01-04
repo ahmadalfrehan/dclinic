@@ -30,5 +30,6 @@ class BaseLocalRepoImpl implements BaseLocalRepo {
   @override
   Future<Either<Failure, bool>> getRememberMe() async {
     throw UnimplementedError();
+
   }
 }

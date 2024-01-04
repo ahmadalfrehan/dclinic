@@ -1,6 +1,9 @@
+
+
 import 'package:flutter/material.dart';
 
 import '../theme/app-themes.dart';
+
 
 class AppTextStyle {
   static const fontSize20 = 19.0;
@@ -17,11 +20,10 @@ class AppTextStyle {
       );
 
   static get textStyleWith500Weight24SizeDarkBlueColor => const TextStyle(
-        color: AppTheme.darkBlue,
-        fontSize: fontSize24,
-        fontWeight: FontWeight.w500,
-      );
-
+    color: AppTheme.darkBlue,
+    fontSize: fontSize24,
+    fontWeight: FontWeight.w500,
+  );
   static get textStyleWith400Weight15SizeDarkBlueColor => const TextStyle(
         color: AppTheme.darkBlue,
         fontSize: fontSize15,
@@ -35,11 +37,10 @@ class AppTextStyle {
       );
 
   static get textStyleWith500Weight13SizeDarkBlueColor => const TextStyle(
-        color: AppTheme.darkBlue,
-        fontSize: fontSize13,
-        fontWeight: FontWeight.w500,
-      );
-
+    color: AppTheme.darkBlue,
+    fontSize: fontSize13,
+    fontWeight: FontWeight.w500,
+  );
   static get textStyleWith700Weight15SizeDarkBlueColor => const TextStyle(
         color: AppTheme.darkBlue,
         fontSize: fontSize15,
@@ -65,18 +66,16 @@ class AppTextStyle {
     color: AppTheme.yelloTheme,
     fontWeight: FontWeight.w700,
   );
-
   static get textStyleWith700Weight20SizeYelloColor => const TextStyle(
-        color: AppTheme.yelloTheme,
-        fontSize: fontSize20,
-        fontWeight: FontWeight.w700,
-      );
-
+    color: AppTheme.yelloTheme,
+    fontSize: fontSize20,
+    fontWeight: FontWeight.w700,
+  );
   static get textStyleWith700Weight24SizeYelloColor => const TextStyle(
-        color: AppTheme.yelloTheme,
-        fontSize: fontSize24,
-        fontWeight: FontWeight.w700,
-      );
+    color: AppTheme.yelloTheme,
+    fontSize: fontSize24,
+    fontWeight: FontWeight.w700,
+  );
   static const textStyleWith700Weight15SizeGreyColor = TextStyle(
     fontSize: fontSize20,
     color: AppTheme.grey170,

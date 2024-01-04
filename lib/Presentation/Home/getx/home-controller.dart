@@ -1,11 +1,14 @@
 import 'package:dclinic/Conf/Debug/out.dart';
+import 'package:dclinic/domain/entites/patient.dart';
 import 'package:dclinic/domain/usecase/gethomedata.dart';
 import 'package:get/get.dart';
 
 import '../../../data/model/returned.dart';
 import '../../../injection.dart';
 
-class HomeController extends GetxController {
+class HomeController extends GetxController{
+
+
   RxString sel = 'select'.obs;
 
   @override

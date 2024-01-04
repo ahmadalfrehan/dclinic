@@ -27,7 +27,7 @@ class Home extends GetView<HomeController> {
               ),
               child: Column(
                 children: [
-                  Button('Home', () => null, icon: Icons.home),
+                  Button('Home', () => null,icon: Icons.home),
                   5.0.spaceY,
                   Button('Add Patient', () {
                     showDialog(
@@ -35,9 +35,9 @@ class Home extends GetView<HomeController> {
                         builder: (context) => const AlertDialog(
                               content: AddPatient(),
                             ));
-                  }, icon: Icons.add),
+                  },icon: Icons.add),
                   5.0.spaceY,
-                  Button('Search', () => null, icon: Icons.search),
+                  Button('Search', () => null,icon: Icons.search),
                 ],
               ),
             ),

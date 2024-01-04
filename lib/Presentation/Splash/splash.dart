@@ -37,11 +37,13 @@ class Splash extends GetView<SplashController> {
                 animatedTexts: [
                   TypewriterAnimatedText(
                     'By ahmadalfrehan',
+
                     textStyle: const TextStyle(
-                        fontSize: 14.0,
-                        fontWeight: FontWeight.w400,
-                        decoration: TextDecoration.underline,
-                        decorationStyle: TextDecorationStyle.dashed),
+                      fontSize: 14.0,
+                      fontWeight: FontWeight.w400,
+                      decoration: TextDecoration.underline,
+                      decorationStyle: TextDecorationStyle.dashed
+                    ),
                     speed: const Duration(milliseconds: 200),
                   ),
                 ],
