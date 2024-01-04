@@ -9,15 +9,11 @@ import '../../../error/exception.dart';
 import '../../domain/Repository/base-repository.dart';
 
 class GetOptions {
-  static getOptions(String token) {
-
-  }
+  static getOptions(String token) {}
 }
 
 class BaseRemoteDataSourceImpl extends BaseRepository {
   final Dio dio;
-
-
 
   BaseRemoteDataSourceImpl({required this.dio});
 
@@ -49,12 +45,12 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
   }
 
   @override
-  Future<List<T>> performGetListRequest<T>(String endpoint,
-      T Function(Map<String, dynamic> p1) fromJson,
+  Future<List<T>> performGetListRequest<T>(
+      String endpoint, T Function(Map<String, dynamic> p1) fromJson,
       {String token = '',
-        String? listName,
-        Map<String, dynamic>? params,
-        int? number}) async {
+      String? listName,
+      Map<String, dynamic>? params,
+      int? number}) async {
     try {
       log(GetOptions.getOptions(token));
       final response = await dio.get(endpoint,
@@ -100,11 +96,12 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
   }
 
   @override
-  Future<T> performGetRequest<T>(String endpoint,
-      T Function(Map<String, dynamic> p1) fromJson, {
-        String token = '',
-        Map<String, dynamic>? params,
-      }) async {
+  Future<T> performGetRequest<T>(
+    String endpoint,
+    T Function(Map<String, dynamic> p1) fromJson, {
+    String token = '',
+    Map<String, dynamic>? params,
+  }) async {
     try {
       final response = await dio.get(endpoint,
           options: await GetOptions.getOptions(token), queryParameters: params);
@@ -112,7 +109,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
       if (ErrorHandler.handleRemoteError(
           response.statusCode!.toInt(), response.data)) {
         Map<dynamic, dynamic> data1 =
-        Map<dynamic, dynamic>.from(json.decode(response.data));
+            Map<dynamic, dynamic>.from(json.decode(response.data));
         final baseRes = fromJson(data1["data"]);
         log(baseRes);
         if (baseRes != null) {
@@ -156,7 +153,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
   @override
   Future<T> performPostRequest<T>(String endpoint, Map<String, dynamic> data,
       T Function(Map<String, dynamic> p1) fromJson,
-      {String token = '', bool? lsLog, bool ? isEmptyAllow}) async {
+      {String token = '', bool? lsLog, bool? isEmptyAllow}) async {
     try {
       final response = await dio.post(endpoint,
           data: data, options: await GetOptions.getOptions(token));
@@ -165,7 +162,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
         T baseRes;
         if (lsLog == true) {
           Map<dynamic, dynamic> userdata =
-          Map<dynamic, dynamic>.from(json.decode(response.data));
+              Map<dynamic, dynamic>.from(json.decode(response.data));
           baseRes = fromJson(userdata['data']);
           if (baseRes != null) {
             return baseRes;
@@ -179,12 +176,10 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
           log(baseRes.toString());
           if (baseRes != null) {
             return baseRes;
-          }
-          else if (isEmptyAllow == true) {
+          } else if (isEmptyAllow == true) {
             T v = true as T;
             return v;
-          }
-          else {
+          } else {
             log('error');
             throw RemoteException(ErrorCode.SERVER_ERROR, 'message');
           }
@@ -221,7 +216,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
           T baseRes;
           if (lsLog == true) {
             Map<dynamic, dynamic> userdata =
-            Map<dynamic, dynamic>.from(json.decode(response.data));
+                Map<dynamic, dynamic>.from(json.decode(response.data));
             log(userdata);
             log(userdata['data']);
             baseRes = fromJson(userdata['data']);
@@ -260,8 +255,8 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
   }
 
   @override
-  Future<T> performPutRequest<T>(String endpoint,
-      T Function(Map<String, dynamic> p1) fromJson, data,
+  Future<T> performPutRequest<T>(
+      String endpoint, T Function(Map<String, dynamic> p1) fromJson, data,
       {String token = ''}) async {
     try {
       final response = await dio.put(endpoint,
@@ -296,8 +291,8 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
   @override
   Future<T> performSimpleGetRequest<T>(String endpoint,
       {T Function(Map<String, dynamic> p1)? fromJson,
-        String token = '',
-        Map<String, dynamic>? params}) async {
+      String token = '',
+      Map<String, dynamic>? params}) async {
     try {
       final response = await dio.get(endpoint,
           options: await GetOptions.getOptions(token), queryParameters: params);
@@ -305,7 +300,7 @@ class BaseRemoteDataSourceImpl extends BaseRepository {
       if (ErrorHandler.handleRemoteError(
           response.statusCode!.toInt(), response.data)) {
         Map<dynamic, dynamic> userData =
-        Map<dynamic, dynamic>.from(json.decode(response.data));
+            Map<dynamic, dynamic>.from(json.decode(response.data));
         final baseRes = userData['data'];
         log(baseRes);
         if (baseRes != null) {

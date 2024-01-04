@@ -6,7 +6,7 @@ import 'Conf/routes/app-pages.dart';
 import 'Conf/routes/app-routes.dart';
 import 'injection.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SQLite.init();
   await SQLite.createDataBase();

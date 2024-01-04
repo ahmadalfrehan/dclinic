@@ -28,10 +28,10 @@ class Patient extends Equatable {
   @override
   // TODO: implement props
   List<Object?> get props => [
-    name,
-    phone,
-    address,
-    patientId,
-    treatment,
-  ];
+        name,
+        phone,
+        address,
+        patientId,
+        treatment,
+      ];
 }

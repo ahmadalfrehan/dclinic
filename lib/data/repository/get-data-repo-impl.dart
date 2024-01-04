@@ -1,10 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:dclinic/data/datasource/getdata-remote-datasource.dart';
-import 'package:dclinic/domain/entites/patient.dart';
 import 'package:dclinic/domain/repositories/get-data-repo.dart';
 
-import '../../Conf/error/Failure.dart' ;
-import '../../Conf/error/enumerror.dart';
+import '../../Conf/error/Failure.dart';
 import '../model/returned.dart';
 
 class GetDataRepoImpl extends GetDataRpo {
@@ -17,8 +15,8 @@ class GetDataRepoImpl extends GetDataRpo {
   @override
   Future<Either<Failure, List<ReturnedModel>>> getData() async {
     // try {
-      final result = await authRemoteDataSource.getData();
-      return Right(result);
+    final result = await authRemoteDataSource.getData();
+    return Right(result);
     // } catch (error) {
     //   return Left(ServerFailure(ErrorCode.SERVER_ERROR, error.toString()));
     // }
