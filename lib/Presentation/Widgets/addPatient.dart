@@ -15,19 +15,19 @@ class AddPatient extends GetView<HomeController> {
     return Container(
       // height: Get.height,
       width: Get.width / 2,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppTheme.white242,
       ),
       child: Column(
         children: [
           Text('Add Patient',
               style: AppTextStyle.textStyleWith500Weight15SizeDarkBlueColor),
-          AppTextField(iconData: Icons.person, hint: 'Patient Name'),
-          AppTextField(iconData: Icons.person, hint: 'Phone'),
-          AppTextField(iconData: Icons.person, hint: 'Address'),
+          const AppTextField(iconData: Icons.person, hint: 'Patient Name'),
+          const AppTextField(iconData: Icons.person, hint: 'Phone'),
+          const AppTextField(iconData: Icons.person, hint: 'Address'),
           DropdownButton<String>(
             isExpanded: true,
-            hint: Text('Select Treatment'),
+            hint: const Text('Select Treatment'),
             items: <String>[
               'محافظة',
               'ترميم',
@@ -45,14 +45,14 @@ class AddPatient extends GetView<HomeController> {
             }).toList(),
             onChanged: (_) {},
           ),
-          AppTextField(iconData: Icons.person, hint: 'Price'),
-          AppTextField(iconData: Icons.person, hint: 'Tooth Number'),
-          AppTextField(iconData: Icons.person, hint: 'Notes'),
-          AppTextField(iconData: Icons.person, hint: 'Notes'),
-          Spacer(),
+          const AppTextField(iconData: Icons.person, hint: 'Price'),
+          const AppTextField(iconData: Icons.person, hint: 'Tooth Number'),
+          const AppTextField(iconData: Icons.person, hint: 'Notes'),
+          const AppTextField(iconData: Icons.person, hint: 'Notes'),
+          const Spacer(),
           Row(
             children: [
-              Spacer(),
+              const Spacer(),
               Button('Add Group  ', () => null,color: AppTheme.darkBlue9,textStyle: AppTextStyle.textStyleWith400Weight12SizeWhiteColor,),
               Button('Add Patient  ', () => null,color: AppTheme.darkBlue9,textStyle: AppTextStyle.textStyleWith400Weight12SizeWhiteColor,),
             ],
